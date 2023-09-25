@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>App de Metas</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">App de Metas</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Nova Meta</h3>
+                <form id="meta-form">
+                    <div class="form-group">
+                        <label for="nome">Nome da Meta:</label>
+                        <input type="text" id="nome" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="descricao">Descrição:</label>
+                        <textarea id="descricao" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="categoria">Categoria:</label>
+                        <input type="text" id="categoria" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="data-termino">Data de Término:</label>
+                        <input type="date" id="data-termino" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="progresso">Progresso:</label>
+                        <select id="progresso" class="form-control">
+                            <option value="0">0%</option>
+                            <option value="10">10%</option>
+                            <option value="20">20%</option>
+                            <option value="30">30%</option>
+                            <option value="40">40%</option>
+                            <option value="50">50%</option>
+                            <option value="60">60%</option>
+                            <option value="70">70%</option>
+                            <option value="80">80%</option>
+                            <option value="90">90%</option>
+                            <option value="100">100%</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="prioridade">Prioridade:</label>
+                        <input type="number" id="prioridade" class="form-control" min="1">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h3>Metas</h3>
+                <ul id="lista-metas" class="list-group">
+                </ul>
+                <a href="concluidas.html" class="btn btn-success">Ver Metas Concluídas</a>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
